@@ -61,8 +61,8 @@ def add_book_interactive(library, filename):
         library.add_book(new_book)
         print(f"Книга '{new_book.title}' добавлена в библиотеку")
 
-        save_choice = input("Сохранить изменения в файл? (y/n): ")
-        if save_choice.lower() == 'y':
+        save_choice = input("Сохранить изменения в файл? (да/нет): ")
+        if save_choice.lower() == 'да':
             save_to_file(filename, library)
 
     except ValueError as e:
@@ -94,8 +94,8 @@ def remove_book_interactive(library, filename):
                 removed_book = library.books.pop(book_num - 1)
                 print(f"Книга '{removed_book.title}' удалена из библиотеки")
 
-                save_choice = input("Сохранить изменения в файл? (y/n): ")
-                if save_choice.lower() == 'y':
+                save_choice = input("Сохранить изменения в файл? (да/нет): ")
+                if save_choice.lower() == 'да':
                     save_to_file(filename, library)
             else:
                 print("Неверный номер книги")
@@ -109,8 +109,8 @@ def remove_book_interactive(library, filename):
 
             if library.remove_book(author, title, publisher, year):
                 print("Книга удалена из библиотеки")
-                save_choice = input("Сохранить изменения в файл? (y/n): ")
-                if save_choice.lower() == 'y':
+                save_choice = input("Сохранить изменения в файл? (да/нет): ")
+                if save_choice.lower() == 'да':
                     save_to_file(filename, library)
             else:
                 print("Книга не найдена")
