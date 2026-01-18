@@ -1,3 +1,5 @@
+from sorting import heap_sort
+
 def get_full_sorted_list(library):
     """Полный список книг, отсортированный по автору (↑), году (↓), количеству экземпляров (↓)"""
     if not library.books:
